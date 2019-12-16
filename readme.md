@@ -129,9 +129,9 @@ Stonehearth created by Radiant Entertainment (https://stonehearth.net)
 VERY SPECIAL thanks to the people that helped this system become what it is and actually work!
 Max, BrunoSupremo and Relyss - THANK YOU! <3
 
-This mod and all its contents are under a CC BY-NC 4.0 license and may
-be used, shared, remixed and anything else as long as credit is given and without
-commercial use! More info: https://creativecommons.org/licenses/by-nc/4.0/
+This mod and all its contents are under a GNU GPL 3.0 license and may
+be used, shared, remixed and anything else as long as credit is given, linked and the
+same license is used! More info: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 ## CHANGELOG
 
