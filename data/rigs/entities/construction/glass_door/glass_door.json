@@ -1,0 +1,13 @@
+{
+   "type" : "rig",
+   "skeleton": {
+      "ATTOVERCOG": [15.0,-15.8389449183,50.7871090782],
+      "door": [7.0,15.0,19.0],
+	  "glass": [7.0,15.0,19.0],
+      "frame": [15.5,15.0,0.0],
+      "head": [15.0,-14.9748535817,23.3160510152],
+      "root": [15.0,15.0,0.0]
+   },
+   "animation_root" : "file(animations)",
+   "effects_root": "file(effects)"
+}

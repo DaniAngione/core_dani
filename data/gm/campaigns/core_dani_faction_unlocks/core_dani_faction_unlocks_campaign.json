@@ -1,0 +1,11 @@
+{
+	"type": "campaign",
+	"rarity": "common",
+	"arcs": {
+		"trigger": {
+			"core_dani_faction_unlocks": "file(arcs/trigger/core_dani_faction_unlocks_arc.json)"
+		},
+		"challenge": {},
+		"climax": {}
+	}
+}

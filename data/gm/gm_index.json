@@ -1,0 +1,8 @@
+{
+   "type": "index",
+   "campaigns": {
+      "core_dani_faction_unlocks": {
+         "core_dani_faction_unlocks": "file(campaigns/core_dani_faction_unlocks/core_dani_faction_unlocks_campaign.json)"
+      }
+   }
+}

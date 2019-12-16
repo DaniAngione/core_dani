@@ -1,0 +1,32 @@
+{
+   "heat:coals": {
+      "render_material": "/stonehearth/data/horde/materials/glowy_voxel.material.json"
+   },
+   "heat:hot_glass": {
+      "render_material": "/stonehearth/data/horde/materials/transparent_add_bloom.material.json"
+   },
+   "glassworks:colorless_flat": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_colorless_glass.material.json"
+   },
+   "glassworks:colorless_bright": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_colorless_glass_bright.material.json"
+   },
+   "glassworks:flat": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_glass.material.json"
+   },
+   "glassworks:bright": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_glass_bright.material.json"
+   },
+   "glassworks:dark_flat": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_glass_dark_flat.material.json"
+   },
+   "glassworks:dark": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_glass_dark.material.json"
+   },
+   "glassworks:obsidian": {
+      "render_material": "/core_dani/data/horde/materials/glassworks_glass_obsidian.material.json"
+   },
+   "fluids:tanning_fluid": {
+      "render_material": "/core_dani/data/horde/materials/tanning_fluid.material.json"
+   }
+}

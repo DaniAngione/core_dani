@@ -1,0 +1,26 @@
+{
+	"shaders" : {
+		"TRANSLUCENT" : {
+			"state" : "/stonehearth/data/horde/states/voxel/add.state",
+			"shader" : "/stonehearth/data/horde/shaders/transparent_color.shader",
+			"inputs" : [
+				{
+					"name" : "alpha",
+					"default" : [0.8, 0.8, 0.8, 0.8],
+					"bind_to_material_input" : "alpha"
+				}
+			]
+		},
+		"BLOOM" : {
+			"state" : "/stonehearth/data/horde/states/voxel/replace.state",
+			"shader" : "/stonehearth/data/horde/shaders/transparent_color.shader",
+			"inputs" : [
+				{
+					"name" : "alpha",
+					"default" : [0.2, 0.2, 0.2, 0.2],
+					"bind_to_material_input" : "alpha"
+				}
+			]
+		}
+	},
+}

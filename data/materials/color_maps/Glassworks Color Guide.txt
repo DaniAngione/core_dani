@@ -1,0 +1,46 @@
+(LINES) COLOR NAME
+----------------------
+(2-4) Obsidian
+
+(6-11) Colorless
+
+(13-18) Light Green (Forest)
+
+(20-25) Bright Green
+
+(27-32) Dark Green
+
+(34-39) Light Yellow/Orange (Forest)
+
+(41-46) Bright Yellow
+
+(48-53) Dark Yellow
+
+(55-60) Light Blue
+
+(62-67) Bright Blue
+
+(69-74) Dark Blue
+
+(76-81) Light Purple
+
+(83-88) Bright Purple
+
+(90-95) Dark Purple
+
+(97-102) Light Red
+
+(104-109) Bright Red
+
+(111-116) Dark Red
+
+(118-123) Light Brown (Pale)
+
+(125-130) Bright Brown (Mid)
+
+(132-137) Dark Brown (Dark)
+
+(139-144) Black
+
+(146-151) White
+

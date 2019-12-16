@@ -1,0 +1,32 @@
+{
+   "info": {
+      "name": "Dani's Core Mod",
+      "namespace": "core_dani",
+      "version": 3,
+      "steam_file_id": "1403214892"
+   },
+   "author": "DaniAngione",
+   "default_locale": "en",
+	"client_init_script": "file(core_dani_client)",
+   "server_init_script": "file(core_dani_server)",
+   "aliases": {
+      "animations:glass_door": "file(data/rigs/entities/construction/glass_door/glass_door.json)",
+      "animations:glass_double_door": "file(data/rigs/entities/construction/glass_double_door/glass_double_door.json)",
+      "color_map:fluids": "file(data/materials/color_maps/fluids_color_map.json)",
+      "color_map:glassworks": "file(data/materials/color_maps/glassworks_color_map.json)",
+      "color_map:heat": "file(data/materials/color_maps/glassworks_heat_color_map.json)",
+      "effects:glass_door": "file(data/rigs/entities/construction/glass_door/effects/closed.json)",
+      "effects:glass_double_door": "file(data/rigs/entities/construction/glass_double_door/effects/closed.json)",
+      "material_map": "file(data/materials/material_maps/core_dani_material_map.json)",
+		"buff_scripts:add_thought": "file(data/buffs/scripts/core_dani_add_thought_buff.lua)",
+		"data:gm_index": "file(data/gm/gm_index.json)"
+   },
+   "mixintos": {
+		"stonehearth:data:gm_index": "core_dani:data:gm_index"
+	},
+   "overrides": {},
+   "components": {
+      "opening_container": "file(components/opening_container/opening_container_component.lua)"
+   },
+   "controllers": {}
+}

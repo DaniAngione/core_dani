@@ -1,0 +1,31 @@
+{
+	"shaders" : {
+		"BLUEPRINTS_DEPTH_PASS" : {
+			"state" : "/stonehearth/data/horde/states/voxel/add_withdepth.state",
+			"shader" : "/stonehearth/data/horde/shaders/voxel/flat_color.shader",
+			"inputs" : [
+				{
+					"name" : "flat_color",
+					"default" : [0, 0, 0, 0]
+				}
+			]
+		},
+		"BLUEPRINTS_COLOR_PASS" : {
+			"state" : "/stonehearth/data/horde/states/voxel/blend_offset.state",
+			"shader" : "/stonehearth/data/horde/shaders/transparent_color.shader",
+			"inputs" : [
+				{
+					"name" : "alpha",
+					"default" : [0, 0, 0, 0.6],
+					"bind_to_material_input" : "alpha"
+				}
+			]			
+		}
+	},
+	"inputs" : [
+		{
+			"name" : "alpha",
+			"default" : [0, 0, 0, 0.6]
+		}
+	]
+}
