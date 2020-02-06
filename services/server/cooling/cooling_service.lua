@@ -189,12 +189,12 @@ function CoolingService:_convert_to_cool_form(entity, cool_alias)
       if player_id then
          inventory = stonehearth.inventory:get_inventory(player_id)
          location = radiant.entities.get_world_grid_location(entity)
-		 cool_entity = radiant.entities.create_entity(cool_alias, { owner = player_id })
+			cool_entity = radiant.entities.create_entity(cool_alias, { owner = player_id })
 		 local entity_forms = cool_entity:get_component('stonehearth:entity_forms')
 		 if entity_forms ~= nil then
 			cool_entity = entity_forms:get_iconic_entity()
 		 end
-         if not location then
+         if inventory and not location then
 			storage = inventory:container_for(entity)
             -- if no location, is it in storage?
             if storage then
