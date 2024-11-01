@@ -78,11 +78,6 @@ function OpeningContainerComponent:destroy()
       self._player_id_trace:destroy()
       self._player_id_trace = nil
    end
-
-   if self._lockable_filter then
-      self._lockable_filter:destroy()
-      self._lockable_filter = nil
-   end
 end
 
 function OpeningContainerComponent:_get_filter_cache()
@@ -162,12 +157,6 @@ function OpeningContainerComponent:_valid_entity(entity)
    if stonehearth.player:are_player_ids_hostile(radiant.entities.get_player_id(entity), radiant.entities.get_player_id(self._entity)) then
       return false
    end
-
-   --[[
-   if not mob_component or not mob_component:get_moving() then
-      return false
-   end
-   ]]
 
    return true
 end

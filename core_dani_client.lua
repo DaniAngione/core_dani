@@ -1,8 +1,17 @@
 core_dani = {}
 
+local stonehearth_ace = require('stonehearth_ace.stonehearth_ace_client')
+
 local monkey_patches = {
-   core_dani_storage_renderer = 'stonehearth.renderers.storage.storage_renderer'
+   core_dani_storage_renderer = 'stonehearth.renderers.storage.storage_renderer',
+   core_dani_selection_service = 'stonehearth.services.client.selection.selection_service'
 }
+
+if stonehearth_ace then
+   monkey_patches = {
+      core_dani_selection_service = 'stonehearth.services.client.selection.selection_service'
+   }
+end
 
 local function monkey_patching()
    for from, into in pairs(monkey_patches) do

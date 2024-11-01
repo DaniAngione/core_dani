@@ -1,6 +1,7 @@
 # Dani's Core Mod
 ### by Daniel Angione
-v1.3.1 for Stonehearth 1.1+
+v2.0 for Stonehearth 1.1+
+Compatible with Stonehearth ACE 0.9.6.18+
 
 ## DESCRIPTION
 
@@ -25,12 +26,12 @@ The Core mod contains the following color maps' aliases:
 	"core_dani:color_map:fluids"
 		Contains colors for fluids with transparency.
 
-### MATERIAL MAP 
+### MATERIAL MAP
 The Core mod has a single material map that contains the definitions of all the materials in the different color maps. Its alias is:
 
 	"core_dani:material_map"
 	
-### ANIMATIONS & EFFECTS
+### NEW ANIMATIONS & EFFECTS
 The Core mod adds two animation tables for rigged entities and their accompanying effects. They can be found with the following aliases:
 
 	"core_dani:animations:glass_door"
@@ -43,47 +44,20 @@ The Core mod adds two animation tables for rigged entities and their accompanyin
 		Allows for double doors to have an additional matrix to each side on their .qb models.
 		The additional matrix must be named "leftGlass" and "rightGlass" but can be anything.
 
-### STORAGE COMPONENT
+### STORAGE COMPONENT CHANGES
 You can use the "default_filter" key to define the default filter for a storage entity. You can also use the "reposition_items" key (set to either "fill" or "shift" to make your entities be reorganized inside containers when things are taken from them. That allows piles of things to not have floating items, for example.
 
-### BUFF SCRIPTS
+### NEW BUFF SCRIPTS
 Use the "script": "core_dani:buff_scripts:add_thought" to add a thought (key is "thought") to a buff. Any entity inflicted by this buff will present this thought.
 
-### FACTION UNLOCKS CAMPAIGN
-You can mix into this campaign to unlock recipes based on faction. This should be very helpful for creating custom recipes per faction without conflicting with mods that redefine faction jobs like ACE.
+### NEW COMPONENT: OPENING CONTAINER
+You can use this component to create entities that will open/close (or play any other animation) when approached.
+
+### NEW COMPONENT: ENTITY CUTAWAY
+This component can be used for entities to have a different model variant when selected by the player. This allows for them to, for example, display their interior in "cutaway" style, hence its name.
 		
-### CORE_DANI:COOLING
-This service allows you to create items that can be transformed into different items - just like the Food_Decay service - but the items can be different depending on whether or not the original entity is left on the ground or inside storage.
-
-To utilize the Cooling service, you must add the Core_dani:cooling service checker to your entity. It goes under "entity_data" and should look like this:
-
-		"core_dani:cooling": {
-			"initial_cooling": {
-				"min": _,
-				"max": _
-			},
-			"cool_entity_alias": "_",
-			"proper_cool_entity_alias": "_",
-			"proper_cooler_alias": "_",
-			"proper_cooler_alias_2": "_",
-			"proper_cooler_alias_3": "_",
-			"alternative_cool_entity_alias": "_",
-			"alternative_cooler_alias": "_"
-		}
-
-The "min" value represents the minimum IN-GAME HOURS before the item is transformed;
-
-The "max" value represents the maximum IN-GAME HOURS before the item is transformed;
-
-"cool_entity_alias" is the alias of the entity to be transformed into if the original entity is left outside/on the ground; It will only transform if defined, if not defined the entity will not be transformed.
-
-"proper_cool_entity_alias" is the alias of the entity to be transformed into if the original entity is left inside some sort of storage.
-
-"proper_cooler_alias", "proper_cooler_alias_2" and "proper_cooler_alias_3" are optional and are the aliases of the proper containers that can properly transform the item. Any other containers will result in the "cool_entity_alias".
-
-"alternative_cooler_alias" is an optional, alternative cooler entity that will provide different results if used. The entity transformed will be the "alternative_cool_entity_alias".
-
-To make sure that your item can only be stored inside the desired containers, utilize unique input tables for the container and material tags for the entity.
+### NEW COMPONENT: PASSIVE TRANSFORMER
+Created to replace the previous "Cooling" service, which was a frankenstein version of the Food Decay service from the base game, this new component is built from the ground up to be a lot more efficient, less demanding and more powerful than the cooling service ever allowed the passive transformation mechanics to be.
 	
 ## COMPATIBILITY
 
@@ -91,19 +65,29 @@ This mod should always be compatible with most mods as long as they do not overr
 
 ## LOCALIZATION
 
-The Core Mod has no localization since it adds no entities. All documentation is in english.
+The Core Mod has no localization at all. All documentation is in english.
 
 ## CREDITS, SUPPORT & LICENSE
 
 Mod created by Daniel Angione (DaniAngione#3266 on Discord; daniangi@gmail.com)
 Stonehearth created by Radiant Entertainment (https://stonehearth.net)
 
-VERY SPECIAL thanks to the people that helped this system become what it is and actually work!
+VERY SPECIAL thanks to the people that helped in the original version of the "cooling service":
 Max, BrunoSupremo and Relyss - THANK YOU! <3
 
 This mod and all its contents are under a GNU GPL 3.0 license and may be used, shared, remixed and anything else as long as credit is given, linked and the same license is used! More info: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 ## CHANGELOG
+
+### October 31st, 2024 - v2.0
+- The "cooling service" is now discontinued, and has been completely reworked into a much more performant, flexible and powerful component called "PASSIVE TRANSFORM".
+- Added a new component called ENTITY CUTAWAY that allows certain entities to display different graphics when selected.
+- Hearthlings can now get buffs from eating (if ACE is not present; ACE already has this feature)
+- The "Faction Unlocks" campaign has been removed since there are now more elegant ways to unlock things per faction.
+- (ACE) There are new gameplay settings available if using ACE!
+
+### May 14th, 2024 - v1.3.2
+- Updated the Storage Renderer file inherited from ACE to fix broken weapon/armor racks.
 
 ### February 6th, 2020 - v1.3.1
 - Small fix to a possible nil inventory error.

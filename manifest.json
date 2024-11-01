@@ -5,6 +5,10 @@
       "version": 3,
       "steam_file_id": "1403214892"
    },
+   "dependencies": [
+      "stonehearth_ace",
+      "lostems"
+   ],
    "author": "DaniAngione",
    "default_locale": "en",
 	"client_init_script": "file(core_dani_client)",
@@ -19,14 +23,28 @@
       "effects:glass_double_door": "file(data/rigs/entities/construction/glass_double_door/effects/closed.json)",
       "material_map": "file(data/materials/material_maps/core_dani_material_map.json)",
 		"buff_scripts:add_thought": "file(data/buffs/scripts/core_dani_add_thought_buff.lua)",
-		"data:gm_index": "file(data/gm/gm_index.json)"
+      "data:constants:passive_transformer": "file(data/passive_transformer_constants.json)",
+      "scripts:ace_transform_lib_additions": "file(scripts/ace_transform_lib_additions.lua)"
    },
    "mixintos": {
-		"stonehearth:data:gm_index": "core_dani:data:gm_index"
+      "stonehearth:data:constants": "core_dani:data:constants:passive_transformer",
+      "stonehearth_ace/data/gameplay_settings/gameplay_settings.json": "file(data/gameplay_settings/gameplay_settings.json)"
 	},
    "overrides": {},
    "components": {
-      "opening_container": "file(components/opening_container/opening_container_component.lua)"
+      "opening_container": "file(components/opening_container/opening_container_component.lua)",
+      "passive_transformer": "file(components/passive_transformer/passive_transformer_component.lua)",
+      "entity_cutaway": "file(components/entity_cutaway/entity_cutaway_component.lua)"
    },
-   "controllers": {}
+   "controllers": {},
+   "functions": {
+      "passive_transformer_tick_setting_changed": {
+         "controller": "file(call_handlers/core_dani_settings_call_handler.lua)",
+         "endpoint": "server"
+      },
+      "on_select_entity": {
+         "controller": "file(call_handlers/core_dani_client_call_handler.lua)",
+         "endpoint": "server"
+      }
+   }
 }

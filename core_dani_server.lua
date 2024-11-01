@@ -1,12 +1,22 @@
 core_dani = {}
 
+local stonehearth_ace = require('stonehearth_ace.stonehearth_ace_server')
+
 local service_creation_order = {
-   'cooling'
+   --'passive_transform' (DISCONTINUED)
 }
 
 local monkey_patches = {
-   core_dani_storage_component = 'stonehearth.components.storage.storage_component'
+   core_dani_storage_component = 'stonehearth.components.storage.storage_component',
+   core_dani_food_decay_service = 'stonehearth.services.server.food_decay.food_decay_service',
+   core_dani_consumption_component = 'stonehearth.components.consumption.consumption_component'
 }
+
+if stonehearth_ace then
+   monkey_patches = {
+      core_dani_storage_component = 'stonehearth.components.storage.storage_component'
+   }
+end
 
 local function monkey_patching()
    for from, into in pairs(monkey_patches) do

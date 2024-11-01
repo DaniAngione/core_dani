@@ -1,0 +1,13 @@
+{
+   "constants": {
+      "passive_transformer": {
+         "RATE_MULTIPLIERS": {
+            "15m": 0.25,
+            "30m": 0.5,
+            "1h": 1,
+            "90m": 1.5,
+            "2h": 2
+         }
+      }
+   }
+}

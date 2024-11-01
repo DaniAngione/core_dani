@@ -1,0 +1,48 @@
+{
+   "core_dani": {
+      "entity_cutaway": {
+         "type": "boolean",
+         "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.entity_cutaway.name)",
+         "description": "i18n(core_dani:ui.shell.settings.gameplayTab.entity_cutaway.description)",
+         "default": true,
+         "ordinal": 0
+      },
+      "passive_transformer_tick": {
+         "type": "list",
+         "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.name)",
+         "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.description)",
+         "values": {
+            "15m": {
+               "ordinal": 1,
+               "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.15m)",
+               "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.15m_description)"
+            },
+            "30m": {
+               "ordinal": 2,
+               "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.30m)",
+               "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.30m_description)"
+            },
+            "1h": {
+               "ordinal": 3,
+               "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.1h)",
+               "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.1h_description)"
+            },
+            "90m": {
+               "ordinal": 4,
+               "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.90m)",
+               "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.90m_description)"
+            },
+            "2h": {
+               "ordinal": 5,
+               "display_name": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.2h)",
+               "description": "i18n(core_dani:ui.shell.settings.gameplayTab.passive_transformer_tick.2h_description)"
+            }
+         },
+         "on_change": {
+            "call": "passive_transformer_tick_setting_changed"
+         },
+         "default": "30m",
+         "ordinal": 1
+      }
+   }
+}
